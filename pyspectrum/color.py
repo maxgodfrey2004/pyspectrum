@@ -15,7 +15,7 @@
 """Contains ANSI color attributes.
 """
 
-ANSI_CODE = '\x1b'
+ESC_CODE = '\x1b'
 RESET = '0'
 
 BLACK = '30'
@@ -45,11 +45,22 @@ BG_MAGENTA = '45'
 BG_CYAN = '46'
 BG_WHITE = '47'
 
-BG_BLACK = '40;1'
-BG_RED = '41;1'
-BG_GREEN = '42;1'
-BG_YELLOW = '43;1'
-BG_BLUE = '44;1'
-BG_MAGENTA = '45;1'
-BG_CYAN = '46;1'
-BG_WHITE = '47;1'
+BG_BRIGHT_BLACK = '40;1'
+BG_BRIGHT_RED = '41;1'
+BG_BRIGHT_GREEN = '42;1'
+BG_BRIGHT_YELLOW = '43;1'
+BG_BRIGHT_BLUE = '44;1'
+BG_BRIGHT_MAGENTA = '45;1'
+BG_BRIGHT_CYAN = '46;1'
+BG_BRIGHT_WHITE = '47;1'
+
+ESC_FORMAT = '{}[{}m'.format
+
+def ansi_format(color_string):
+    """Formats an ansi escape sequence with a given color string.
+
+    Args
+      color_string: The aforementioned color string to be placed in the escape
+                    sequence.
+    """
+    return ESC_FORMAT(ESC_CODE, color_string)
