@@ -1,0 +1,10 @@
+language: python
+
+python:
+  - "3.6"
+
+install:
+  - pip3 install nose2
+
+script:
+  - nose2 -s pyspectrum/
