@@ -16,8 +16,13 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import os
-import sys
+import setuptools
 
-_file_dir = os.path.dirname(__file__)
-sys.path.append(_file_dir)
+setuptools.setup(
+    name='pyspectrum',
+    version='0.1.0',
+    description='Cross platform colored output in Python.',
+    author='Max Godfrey',
+    url='https://github.com/maxgodfrey2004/pyspectrum',
+    packages=setuptools.find_packages()
+)

@@ -19,8 +19,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import color
-import output
+from pyspectrum import color
+from pyspectrum import output
 
 def test_assignment():
     """Tests getters and setters of output.ColoredOutput.
@@ -56,3 +56,11 @@ def test_reset():
     co.fg_color = color.CYAN
     co.reset()
     assert co.fg_color == color.ansi_format(color.RESET)
+
+def run_all():
+    """Runs all tests located in this module.
+    """
+    test_assignment()
+    test_constructor()
+    test_reset()
+    print('test_output.py: All tests passed!')

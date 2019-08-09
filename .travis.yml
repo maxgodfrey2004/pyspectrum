@@ -4,7 +4,7 @@ python:
   - "3.6"
 
 install:
-  - pip3 install nose2
+  - pip3 install -e .
 
 script:
-  - nose2 -s pyspectrum/
+  - python3 tests/pyspectrum
