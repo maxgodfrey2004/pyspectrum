@@ -19,7 +19,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import color
+from pyspectrum import color
 
 def test_ansi_format():
     """Tests pyspectrum.color.ansi_format.
@@ -28,3 +28,9 @@ def test_ansi_format():
     assert color.ansi_format(color.BG_RED) == '\x1b[41m'
     assert color.RESET == '0'
     assert color.ansi_format(color.RESET) == '\x1b[0m'
+
+def run_all():
+    """Runs all tests located in this module.
+    """
+    test_ansi_format()
+    print('test_color.py: All tests passed!')
