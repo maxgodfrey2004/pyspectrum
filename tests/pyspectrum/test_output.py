@@ -27,21 +27,21 @@ def test_assignment():
     """
 
     co = output.ColoredOutput()
-    co.fg_color = color.CYAN
+    co.fg_color = color.FG_CYAN
     co.bg_color = color.BG_BLUE
-    assert co.fg_color == color.ansi_format(color.CYAN)
+    assert co.fg_color == color.ansi_format(color.FG_CYAN)
     assert co.bg_color == color.ansi_format(color.BG_BLUE)
 
 def test_constructor():
     """Tests output.ColoredOutput.__init__.
     """
 
-    co = output.ColoredOutput(color.RED, color.BG_WHITE)
-    assert co.fg_color == color.ansi_format(color.RED)
+    co = output.ColoredOutput(color.FG_RED, color.BG_WHITE)
+    assert co.fg_color == color.ansi_format(color.FG_RED)
     assert co.bg_color == color.ansi_format(color.BG_WHITE)
 
-    co = output.ColoredOutput(color.RED)
-    assert co.fg_color == color.ansi_format(color.RED)
+    co = output.ColoredOutput(color.FG_RED)
+    assert co.fg_color == color.ansi_format(color.FG_RED)
     assert co.bg_color == color.ansi_format(color.RESET)
 
     co = output.ColoredOutput()
@@ -53,7 +53,7 @@ def test_reset():
     """
 
     co = output.ColoredOutput()
-    co.fg_color = color.CYAN
+    co.fg_color = color.FG_CYAN
     co.reset()
     assert co.fg_color == color.ansi_format(color.RESET)
 
