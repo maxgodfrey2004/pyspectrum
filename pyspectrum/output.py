@@ -116,6 +116,8 @@ class ColoredOutput(object):
         Args:
           new_color: The new color which the foreground is being set to.
         """
+        if new_color not in color.FG_COLORS:
+            raise ValueError('new_color is not a foreground color.')
         self._set_fg_color(new_color)
 
     @property
@@ -131,6 +133,8 @@ class ColoredOutput(object):
         Args:
           new_color: The new color which the background is being set to.
         """
+        if new_color not in color.BG_COLORS:
+            raise ValueError('new_color is not a background color.')
         self._set_bg_color(new_color)
 
     def _set_fg_color(self, new_color):
