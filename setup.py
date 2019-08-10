@@ -12,6 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""Allows the module to be installed locally with pip/pip3.
+
+To install, head to the project root directory, and type (with no backticks):
+`pip3 install -e .`
+
+After the installation has finished, you will then be able to use pyspectrum
+in your scripts and from the Python terminal.
+"""
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
