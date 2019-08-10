@@ -51,15 +51,15 @@ class ColoredOutput(object):
         self._fg_color = fg_color
         self._bg_color = bg_color
 
-    def print(self, *args, end='\n', sep=' '):
+    def print(self, end='\n', sep=' ', *args):
         """Behaves like print, but outputs colors before and after print args.
 
         Args:
-          *args: Arguments passed to print.
           end: The char outputted after print has printed its arguments. Passed
                to print.
           sep: The char placed in between each argument given to print. Passed
                to print.
+          *args: Arguments passed to print.
         """
         ansi_output = ''
         if self.fg_color != ANSI_RESET:
