@@ -19,3 +19,5 @@ exclude_patterns:
   - "**/vendor/"
   - "**/*.d.ts"
   - "tests/pyspectrum/"
+  - "examples/"
+
