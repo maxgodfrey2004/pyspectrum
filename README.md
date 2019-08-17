@@ -1,6 +1,8 @@
 # pyspectrum [![Build Status](https://travis-ci.com/maxgodfrey2004/pyspectrum.svg?branch=master)](https://travis-ci.com/maxgodfrey2004/pyspectrum) [![Maintainability](https://api.codeclimate.com/v1/badges/5aba341fdedbdb348937/maintainability)](https://codeclimate.com/github/maxgodfrey2004/pyspectrum/maintainability)
 Cross platform colored output in Python.
 
+![pyspectrum_demo](https://user-images.githubusercontent.com/34620214/63206708-3a091780-c0ec-11e9-9666-e1b26d19a38d.png)
+
 ## Examples
 
 Using pyspectrum is really simple. After [installing](#installation), try the following script:
